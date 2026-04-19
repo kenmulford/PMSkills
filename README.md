@@ -37,6 +37,34 @@ These skills enforce discipline that stock LLMs consistently violate:
 - **No fabricated balance**: if the user gave 4 negatives and 0 positives, the output has 4 negatives and 0 positives
 - **Figure linting**: scripts flag any number, date, or SLA in the draft that doesn't appear in the user's original message
 
+## Install
+
+### Claude Code (CLI)
+
+```bash
+# Add the marketplace (one time)
+claude plugin marketplace add kenmulford/PMSkills
+
+# Install the plugin
+claude plugin install pm-skills@pmskills
+
+# Update marketplace to pick up new versions
+claude plugin marketplace update pmskills
+```
+
+### Claude Code (interactive)
+
+```
+/plugin marketplace add kenmulford/PMSkills
+/plugin install pm-skills@pmskills
+/plugin marketplace update pmskills
+/reload-plugins
+```
+
+### Cowork (desktop)
+
+Download `pm-skills.plugin` from this repo and open it in Cowork.
+
 ## Requirements
 
 - Python 3.9+

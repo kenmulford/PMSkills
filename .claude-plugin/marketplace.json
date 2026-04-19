@@ -1,0 +1,13 @@
+{
+  "name": "pmskills",
+  "owner": {
+    "name": "Ken Mulford"
+  },
+  "plugins": [
+    {
+      "name": "pm-skills",
+      "source": "./",
+      "description": "15 Project+ skills for technical PMs — generate charters, RACI matrices, risk registers, status reports, meeting minutes, decision logs, and more as production-ready .docx, .xlsx, and .pptx artifacts."
+    }
+  ]
+}
