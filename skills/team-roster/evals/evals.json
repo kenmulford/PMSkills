@@ -1,0 +1,20 @@
+{
+  "skill_name": "team-roster",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I'm kicking off the ServiceNow ticket migration project and I need a team roster. Here's who I've got: me (Ken Mulford) as PM, my sponsor is Priya Patel, VP of Customer Success. The engineering work is being led by Marcus Chen, a senior backend engineer reporting to Alicia Gomez (Director of Engineering). Marcus is full time on this. I also have two of Marcus's reports pulled in half time — Jordan Lee and Sam Rivera. From the Customer Success side, Taylor Kim (support ops manager) is our point person, about 1 day a week. We'll need someone from Security to sign off on data handling but we don't know who yet. Slack is how we communicate for everything.",
+      "expected_output": "A well-structured roster .xlsx with 6 rows: Ken (PM), Priya (sponsor, extended), Marcus Chen (core, full time, reports to Alicia), Jordan Lee and Sam Rivera (core, half time, report to Marcus implicitly or TBD), Taylor Kim (extended, 1 day/wk), and one TBD Security row. Contact method should be Slack for everyone stated. Should NOT invent email addresses, titles beyond what was given, or a security person's name. Availability phrases should be preserved verbatim (e.g., 'half time', '1 day a week')."
+    },
+    {
+      "id": 2,
+      "prompt": "Can you build me a team roster for my new data platform project? Honestly I don't know who's on it yet — my manager said I'd be PM and asked me to figure out who I need. I know I'll need at least a data engineer, probably two, and someone from the BI team. That's all I've got.",
+      "expected_output": "Should recognize the user has very sparse staffing info and produce a draft roster with mostly TBD rows (or a small number of role-only rows with names as TBD). Should NOT fabricate names, managers, or contact methods. The Draft Gaps sheet should list many open items and an open_questions.md should be emitted. Could optionally ask a batch of 3-5 clarifying questions before drafting."
+    },
+    {
+      "id": 3,
+      "prompt": "Draft a team roster for Project Aurora (the new authentication service). I'm the PM, Ken Mulford. Sponsor is Mei Tanaka, VP of Platform. Core team is 6 backend engineers reporting to Raj Patel (Engineering Manager, Platform), all full time: Aisha Khan, Tom Becker, Lin Zhou, Diego Ramirez, Sofia Andersson, and one more engineer TBD (req is open). Security lead is Noor Hassan from the Security org, reports to Elena Volkov, full time. Extended team: Mei herself for approvals, and two app owner reps (Kyle Tran for the billing app, Priya Shah for the admin portal) — both about 20% time. Preferred contact is Slack for everyone except Noor who prefers email.",
+      "expected_output": "A complete roster with 11 rows: 5 named core engineers + 1 TBD-name core engineer (all reporting to Raj Patel, full time, Slack), Noor Hassan (core, full time, email, reports to Elena Volkov, Security org), Mei Tanaka (extended, sponsor role), Kyle Tran and Priya Shah (extended, ~20%, Slack). The sixth engineer row should have name as [TBD — req is open] but other fields filled in. Minimal gaps. Should not pad with invented content."
+    }
+  ]
+}

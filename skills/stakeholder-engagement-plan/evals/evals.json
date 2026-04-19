@@ -1,0 +1,20 @@
+{
+  "skill_name": "stakeholder-engagement-plan",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I need a stakeholder engagement plan for our ServiceNow ticket migration. My sponsor Priya Patel (VP Customer Success) is on board and wants weekly updates. The CFO Dana Park is skeptical about the $150k budget — she's asking for a business case and will need monthly updates. The support team (~30 agents) doesn't know about the change yet but will be heavily impacted on cutover day; their manager Taylor Kim is already helping plan. Engineering is neutral — they'll do the work but it's not their top priority; Marcus Chen is the eng lead. The Salesforce and Slack integration owners (two separate people, names TBD) need to be looped in before cutover. I'm the PM, Ken Mulford.",
+      "expected_output": "A draft SEP .docx with ~6 stakeholder rows: Priya (supportive, high/high, weekly), Dana Park (resistant, high/medium, monthly, concerns about budget), Support team (unaware, medium/high), Taylor Kim (supportive, or rolled into support team), Marcus Chen / Engineering (neutral, medium/medium), and two TBD integration owners. Should NOT invent concerns, quadrants, or comms details the user didn't state. Should correctly place Dana as Resistant current → Supportive/Neutral desired."
+    },
+    {
+      "id": 2,
+      "prompt": "Draft a stakeholder engagement plan for my new internal finance dashboard project. I'm the PM (Alex Park). I honestly don't know the stakeholders yet — my manager is sponsoring but I haven't had the kickoff. Help.",
+      "expected_output": "A mostly-TBD draft. Sponsor row should be [TBD — manager name not stated]. Minimal stakeholder entries (maybe 1-2 TBD rows). Open questions document should be emitted. Should NOT fabricate a CFO, finance team members, or concerns. Could optionally ask a clarifying batch before drafting."
+    },
+    {
+      "id": 3,
+      "prompt": "Build me a stakeholder engagement plan for Project Aurora (the new auth service). Stakeholders: Mei Tanaka (sponsor, VP Platform, highly supportive, wants weekly 1:1s), the 40 app owners (mixed — some are neutral, some are worried about breaking their apps; they need biweekly updates via a dedicated Slack channel), Noor Hassan (security lead, fully bought in, needs to be consulted on threat model decisions), Elena Volkov (Noor's manager — she reports up to Elena on security matters). Aisha Khan is the backend lead, supportive, part of the core team. Raj Patel is Aisha's manager — mentioned only for org context. Ken Mulford is me, the PM.",
+      "expected_output": "A SEP with stakeholders Mei (leading, weekly 1:1), app owners (grouped, mixed current/supportive desired, biweekly Slack), Noor (supportive, consulted on threat model), and Aisha (supportive, core team). Elena and Raj MUST NOT appear as stakeholders — they are reporting lines only. Comms plan should capture what was stated. No invented concerns beyond what user wrote."
+    }
+  ]
+}

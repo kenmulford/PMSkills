@@ -1,0 +1,30 @@
+{
+  "name": "pm-skills",
+  "version": "1.0.0",
+  "description": "15 Project+ skills for technical PMs — generate charters, RACI matrices, risk registers, status reports, meeting minutes, decision logs, and more as production-ready .docx, .xlsx, and .pptx artifacts. Enforces never-invent discipline: no fabricated names, dates, metrics, or stakeholders.",
+  "author": {
+    "name": "Ken Mulford"
+  },
+  "keywords": [
+    "project management",
+    "Project+",
+    "PMBOK",
+    "charter",
+    "RACI",
+    "risk register",
+    "status report",
+    "meeting minutes",
+    "decision log",
+    "change request",
+    "lessons learned",
+    "closeout report",
+    "stakeholder engagement",
+    "kickoff deck",
+    "team roster",
+    "WBS",
+    "budget",
+    "project schedule"
+  ],
+  "repository": "https://github.com/kenmulford/PMSkills",
+  "license": "MIT"
+}

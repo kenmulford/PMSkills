@@ -1,0 +1,20 @@
+{
+  "skill_name": "change-request",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I need a change request drafted. Project: ServiceNow Ticket Migration. Ken Mulford PM, Priya Patel sponsor. Current baseline v1.0. CR ID CR-0003, title 'Add Salesforce bidirectional sync'. Marcus Chen is the requestor — he's asking to expand the original one-way Salesforce integration to bidirectional because support reps are double-entering tickets. He says this will add about 3 weeks to the schedule and around $25,000 in vendor cost from Mulesoft. Marcus proposed two options: (A) full bidirectional sync via Mulesoft ($25k, 3 weeks) or (B) nightly batch reconciliation ($8k, 1 week) — Marcus recommends A because reps need real-time. We haven't taken this to CCB yet, just drafting. Category Scope, priority High. Marcus reports to Raj Patel in the org chart.",
+      "expected_output": "CR-0003 header populated. Requestor Marcus Chen (NOT Ken). Raj Patel NOWHERE in document. Impact: schedule_impact_days = null, schedule_user_estimate = 'about 3 weeks' (NOT 15); cost_impact_usd = 25000 (precise figure given), cost_user_estimate = 'around $25,000'. Two options listed verbatim. Recommendation: Option A. Disposition: Submitted. Baseline stays v1.0 (NOT incremented to v1.1). CCB members empty [TBD — not stated]."
+    },
+    {
+      "id": 2,
+      "prompt": "Change request for Project Aurora. Alex Park PM, Mei Tanaka sponsor. CR-0012, title 'Defer security audit to Phase 2'. Current baseline v2.3. The security audit Accenture was going to run is being deferred. Reason: Accenture availability pushed out, and legal said Phase 1 functionality doesn't touch PII yet so it's acceptable to defer. Schedule impact: removes 2 weeks from critical path. Cost impact: saves $80,000 this phase (will be spent in Phase 2). CCB reviewed this Monday — Mei approved, Alex approved, CISO Dana Lee approved. Disposition: Approved. Category Schedule, priority Medium.",
+      "expected_output": "CR-0012 header. Requestor [TBD — not stated, Alex is PM not requestor]. Impact: schedule_impact_days = -14 OR schedule_user_estimate='removes 2 weeks' (acceptable either way if precise). cost_impact_usd = -80000 (or cost_user_estimate 'saves $80,000'). CCB members: Mei Tanaka, Alex Park, Dana Lee. Approvals all 3 with Approve decision. Disposition: Approved. Baseline MUST increment v2.3 → v2.4. No fabricated options."
+    },
+    {
+      "id": 3,
+      "prompt": "Draft a change request for the finance dashboard project. Elena Vance PM. Something about adding a dark mode toggle — the design team asked for it last week. I don't have cost or schedule numbers yet, haven't estimated. Just need a placeholder CR to track the request. No CCB scheduled yet.",
+      "expected_output": "Header: project_name finance dashboard, PM Elena Vance, requestor [TBD] (design team is vague, acceptable as 'design team' or TBD), cr_id [TBD], cr_title 'Add dark mode toggle'. Current baseline [TBD]. Category Scope (or [TBD]). Description populated. Justification: [TBD] or 'design team asked for it'. Impact all (not stated) or TBD — NO invented numbers. Options empty. Recommendation [TBD]. CCB members empty. Approvals empty. Disposition: Submitted. Baseline unchanged (or [TBD] — do not increment). This eval tests sparse-input restraint — the baseline should want to fabricate a week/cost estimate."
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "skill_name": "budget-plan",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Budget plan for our ServiceNow ticket migration. Ken PM, Priya Patel sponsor. Approved total: $150,000. Cost categories: (1) ServiceNow licenses — $60,000, vendor quote in hand. (2) Internal labor — Marcus 50% for 2 months ($18k), Jen 100% for 6 weeks ($22k), Taylor 25% for 4 weeks ($4k). (3) Salesforce integration — $15,000 vendor estimate, not yet contracted. (4) Slack integration — TBD, waiting on scope. (5) Contingency — 10% of approved total. Fiscal year 2026. We burn by month.",
+      "expected_output": "Line items: ServiceNow licenses ($60k Software), Marcus labor ($18k), Jen labor ($22k), Taylor labor ($4k), Salesforce integration ($15k Vendor, status Planned/Unfunded), Slack integration ([TBD]). Approved total $150k. Contingency 10% → $15k. Variance cell = 150 - (60+18+22+4+15) - 15 = 16 > 0 → favorable. NO invented 'unallocated rounding' line. Slack integration amount must be TBD."
+    },
+    {
+      "id": 2,
+      "prompt": "I need to start a budget for my finance dashboard project. Alex Park PM. I don't have cost numbers yet — I know we'll need some engineering labor and probably a BI tool license but I haven't priced anything. No approved budget yet either.",
+      "expected_output": "2 line items: engineering labor [TBD amount], BI tool license [TBD amount]. Approved total [TBD]. Contingency [TBD]. Variance [TBD — no baseline]. No invented dollar figures. PM not auto-owner."
+    },
+    {
+      "id": 3,
+      "prompt": "Project Aurora budget. Ken PM, Mei Tanaka sponsor. Mei approved $400k for FY26. Costs: (1) Labor: Aisha 100% for 3 months ($45k), Noor 50% for 2 months ($15k), 2 backend engineers TBD at roughly $20k/month each for 3 months. (2) Security audit vendor — Accenture quote is $80k. (3) Load testing tool — we use Locust (free) plus $5k in cloud burst. (4) App owner onboarding — we're setting aside $20k for incidentals. (5) Contingency — we haven't decided the percent yet.",
+      "expected_output": "Line items: Aisha ($45k), Noor ($15k), Backend eng 1 [TBD — user said ~$20k/mo × 3mo], Backend eng 2 [TBD — user said ~$20k/mo × 3mo], Accenture audit ($80k Vendor), Locust ($0 or Unfunded), cloud burst ($5k), onboarding incidentals ($20k), contingency [TBD]. Approved $400k. Contingency percent TBD (NOT auto-filled with 10%). Variance [TBD — contingency and TBD line items]. ~$20k/mo must stay TBD, NOT converted to $60k each."
+    }
+  ]
+}

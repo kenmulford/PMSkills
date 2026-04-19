@@ -1,0 +1,20 @@
+{
+  "skill_name": "closeout-report",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Closeout report for ServiceNow Ticket Migration. Ken Mulford PM, Priya Patel sponsor, customer is internal IT Operations. Start Jan 6 2026, actual end April 10 2026. Planned end was April 3. Budget was $150,000, actuals came in at $147,200. Delivered: ticket migration for all 8 tracks, training program, and the ETL runbook. Salesforce bidirectional sync deferred to Phase 2. Priya signed off on Monday April 13. Known defect: workflow rule SNW-42 misfires on tickets over 90 days old, workaround is manual tagging. Mulesoft contract closed, final payment sent. Marcus Chen reports to Raj Patel.",
+      "expected_output": "Cost variance $2,800 under (computed). Schedule variance +7 days late (computed). Scope delivered: 3 items exactly. Scope deferred: Salesforce sync. Deliverables: 3 items with acceptance_status [TBD] — NOT 'Accepted' just because project is closing. Sign-off block: ONLY Priya Patel as Sponsor with decision Signed, date 2026-04-13. NO fabricated PM/Customer signature lines. Known defect with workaround preserved verbatim. Mulesoft contract closed. Raj Patel NOT in document."
+    },
+    {
+      "id": 2,
+      "prompt": "I need to close out the finance dashboard project. Elena Vance PM. Planned budget was $85k, I don't have the final actuals yet — finance is still reconciling. Scope delivered: the exec dashboard, 3 custom reports, and SSO integration. Planned end was March 31, we actually shipped March 24. No defects known. No sign-offs yet — I'm sending the draft to the CFO next week. Vendor Tableau license renewed, not a closeout vendor. Marcus is a key stakeholder.",
+      "expected_output": "Cost variance [TBD — actuals not stated]. Do NOT invent 'on budget' or assume $85k actual. Schedule variance −7 days ahead (computed from planned March 31 and actual March 24). Scope delivered: 3 items exactly. Deliverables all acceptance_status [TBD]. Sign-off block: empty [TBD — no sign-offs]. Do NOT stamp CFO as Signed or Pending — user didn't name them as a signatory, only said they're receiving the draft. Known defects empty. Tableau: not listed in vendor closure since user said 'not a closeout vendor' (or listed as Open/not applicable)."
+    },
+    {
+      "id": 3,
+      "prompt": "Closeout for Project Aurora Phase 1. Ken PM, Mei Tanaka sponsor. Customer is Corporate Security team. Started Oct 15 2025, closed March 31 2026. Planned end was Feb 28 but we slipped. Budget $400k, came in at $412,500 — over budget. Delivered: security audit report, new runbook, rollback procedure, incident drill documentation. Accepted by Dana Lee (CISO) on March 28. Sponsor Mei signed off March 30. Also need PM sign-off from me — I'm signing today. Known defects: 2 items in the runbook still need SME review, medium severity, workaround is the legacy escalation path. Accenture contract pending final payment. Open items: SME review of runbook appendix, final archive of project artifacts.",
+      "expected_output": "Cost variance $12,500 over (computed from 400k - 412500). Schedule variance +31 days late (Feb 28 → Mar 31). Scope delivered: 4 items. Deliverables: 4 entries, ALL with acceptance_status = Accepted, accepted_by = Dana Lee, acceptance_date 2026-03-28 (user explicitly said Dana accepted). Sign-offs: Mei Tanaka (Sponsor, Signed, 2026-03-30), Ken (PM, Signed, today's date). Known defects: 1 entry with severity Medium and workaround 'legacy escalation path'. Accenture contract 'Pending Final Payment'. Open items: 2 items listed."
+    }
+  ]
+}

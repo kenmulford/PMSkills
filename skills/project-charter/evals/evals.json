@@ -1,0 +1,23 @@
+{
+  "skill_name": "project-charter",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Hey, my VP just asked me to own a project to migrate our customer support tickets from Zendesk to a new ServiceNow instance. It needs to be done before our contract renewal in October. I have no charter yet and my sponsor (the VP of Customer Success) wants something on her desk by Friday. Can you help me put one together? I'd say budget is probably around $150k including licensing, and we need to preserve all ticket history. The existing integrations with Salesforce and Slack both need to keep working.",
+      "expected_output": "A draft project charter .docx saved to the workspace folder, covering all the standard sections. Should capture the migration scope, the October deadline as a hard constraint, the $150k budget, the two integration constraints (Salesforce, Slack), and preserving history as acceptance criteria. Should flag open questions like team staffing, success metrics for migration quality, risk around data loss, and the specific go-live date. Should NOT invent stakeholders, milestones, or risks that weren't provided.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "I need a project charter for a new internal tool we want to build. It's going to be a dashboard for our finance team so they can see cash position across all our bank accounts in real-time instead of waiting for month-end. I'm the PM. That's honestly about all I know right now. Help?",
+      "expected_output": "Should recognize the user has very limited information and conduct an interview (or ask a batch of clarifying questions) before producing a draft. The output should either be a draft charter with many [TBD] placeholders and a clear list of open questions, OR a structured set of questions the user needs to answer before a charter can be drafted. Should NOT fabricate a sponsor, budget, timeline, or success criteria.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Draft a project charter for Project Aurora. Sponsor is Mei Tanaka, VP of Platform. I'm the PM. We're building a new authentication service to replace our current homegrown SSO. Goal is to move all internal apps (about 40 of them) to the new service over 6 months starting April 2026. Success means zero downtime during migration, all apps migrated, and a 50% reduction in auth-related support tickets. Team size ~6 engineers + 1 security lead. Budget ~$400k. Main risk is app owners not migrating on time. Out of scope: customer-facing authentication (that's a separate project).",
+      "expected_output": "A complete, well-structured charter .docx with minimal gaps because the user gave thorough information. Should include: the named sponsor and PM, Aurora as project name, the April 2026 start, the 6-month duration, zero-downtime acceptance criterion, 50% ticket reduction as a lagging indicator, the 40-app migration as primary deliverable, the $400k budget, the ~7-person team note, the app-owner timing risk, and explicitly exclude customer-facing auth. Should format cleanly and not pad with invented content.",
+      "files": []
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "skill_name": "status-report",
+  "eval_type": "multi-week-drift",
+  "description": "Three sequential weekly status reports for the same ServiceNow migration project. The test is whether baseline runs drift (reorder sections, rename headings, lose RAG trend, convert metrics to percentages) vs whether the skill holds consistent structure across weeks.",
+  "project_context": {
+    "project_name": "ServiceNow Ticket Migration",
+    "project_manager": "Ken Mulford",
+    "sponsor": "Priya Patel",
+    "team_notes": "Marcus Chen (Eng Lead, reports to Raj Patel). Jen Wu (ETL engineer). Taylor Kim (Support Manager).",
+    "reporting_line_trap": "Raj Patel should NEVER appear in any report — he is Marcus's manager, reporting line only."
+  },
+  "weeks": [
+    {
+      "id": "week1",
+      "week_ending": "2026-04-10",
+      "prompt": "Weekly status for ServiceNow ticket migration, week ending Friday April 10 2026. I'm Ken Mulford, PM, reporting to Priya Patel. This was our kickoff week. RAG green. Accomplishments: kickoff meeting held Monday, Marcus Chen started field mapping, Taylor Kim began outlining the training deck, Jen Wu was onboarded to the project. No risks or issues materialized yet — we're early. Asks: need Priya to confirm the $150k budget this week. Upcoming: finish field mapping, begin ETL script scaffolding, finalize training deck outline. For context, Marcus reports to Raj Patel in the org chart but Raj has no role in this project. Metric: 0 of 8 planned workshops complete."
+    },
+    {
+      "id": "week2",
+      "week_ending": "2026-04-17",
+      "prompt": "Weekly status for ServiceNow ticket migration, week ending Friday April 17 2026. Ken Mulford PM, reporting Priya Patel. RAG yellow this week (last week was green). Accomplishments: Marcus finished field mapping ahead of schedule, Jen started ETL scripts, Taylor drafted the training deck. Issue that's biting us right now: Salesforce integration still has no owner — I escalated to Priya on Tuesday, no reply yet, this is blocking our integration track. Risks: Taylor worried the 2-week training timeline is too tight for the volume of material, watching closely. Asks: need owner confirmation on Salesforce integration by Friday; need Priya's go/no-go on expanding training to 3 weeks. Upcoming: Jen continues ETL, Taylor runs workshop 1, mock cutover dry-run Tuesday. Metric: 0 of 8 workshops complete; 1 of 4 integration tracks owned."
+    },
+    {
+      "id": "week3",
+      "week_ending": "2026-04-24",
+      "prompt": "Weekly status for ServiceNow ticket migration, week ending Friday April 24 2026. Ken PM, Priya sponsor. RAG still yellow but trending toward green — we're recovering. Last week was yellow. Accomplishments: Jen completed the ETL script core, Taylor ran workshop 1 with 12 agents (feedback strong), mock cutover dry-run Tuesday surfaced a data mapping bug Marcus is now fixing, two Salesforce integration owner candidates identified (Priya is deciding between them). Issues: data mapping bug from dry-run — Marcus estimates 2 days to fix, currently blocking the full cutover test. Risks: training throughput risk from last week appears to be resolving — Taylor feels good about pace after workshop 1. Asks: need Priya's decision on Salesforce integration owner by Monday. Upcoming: Marcus fixes data mapping bug, run mock cutover full test Thursday, Taylor runs workshop 2. Metric: 1 of 8 workshops complete; 1 of 4 integration tracks owned (soon to be 2)."
+    }
+  ]
+}

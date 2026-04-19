@@ -1,0 +1,20 @@
+{
+  "skill_name": "kickoff-deck",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Build me a kickoff deck for our ServiceNow ticket migration. I'm the PM (Ken Mulford). Sponsor is Priya Patel (VP Customer Success). Vision: unify support tooling so agents stop swivel-chairing between Zendesk and our internal tracker. Objectives: complete cutover by October, zero ticket loss during migration. In scope: ticket migration, agent training, integration with Salesforce and Slack. Out of scope: knowledge base migration. Team: Marcus Chen (Eng Lead, reports to Raj Patel), Taylor Kim (Support Manager), Dana Park (CFO, finance oversight). Milestones: mock cutover in August, go-live in October. Risk: agent training gap — Taylor will run workshops. Cadence: weekly standup, biweekly steering with Priya. Tools: Slack #sn-migration, Jira. Asks for the kickoff: confirm $150k budget, identify two integration owners for Salesforce and Slack.",
+      "expected_output": "9-10 slide deck with: title (ServiceNow migration, Ken, Priya), vision slide quoting user's words, objectives (2 bullets), scope slide with in/out, team slide showing Marcus/Taylor/Dana (NOT Raj — reporting line), milestones August and October (preserved wording), risk with mitigation, ways of working (weekly standup / biweekly steering / Slack #sn-migration / Jira), asks (budget confirm, 2 integration owners). No fabricated dates like 'October 31'. Should NOT invent CFO concerns beyond what Ken said."
+    },
+    {
+      "id": 2,
+      "prompt": "Kickoff deck for my new finance dashboard project. I'm the PM (Alex Park). I don't have much detail yet — my manager is sponsoring but we haven't had the actual kickoff meeting. The rough idea is to build a dashboard for the finance team so they can self-serve their monthly close metrics. That's about all I know right now.",
+      "expected_output": "Mostly-TBD deck. Title slide with Alex Park as PM, sponsor [TBD — manager name not stated]. Vision from user's words. Nearly everything else [TBD]: objectives, scope (except 'dashboard for finance self-serve'), team, milestones, risks, ways of working, asks. Should NOT fabricate a Finance Team, Data Engineer, or specific go-live date. Open questions document should be emitted. A plausible-sounding made-up deck is WRONG."
+    },
+    {
+      "id": 3,
+      "prompt": "Build a kickoff deck for Project Aurora (new auth service). I'm the PM (Ken Mulford). Sponsor: Mei Tanaka (VP Platform, fully supportive, wants weekly 1:1s). Vision: replace our aging auth middleware with a modern service that meets new compliance requirements for session token storage. Objectives: pass compliance review by Q2, zero downtime during migration, 40 app owners fully migrated by end of Q3. In scope: new auth service, migration tooling, app owner onboarding. Out of scope: SSO changes, password policy. Team: Aisha Khan (backend lead, reports to Raj Patel), Noor Hassan (security lead, reports to Elena Volkov), and the 40 app owners collectively. Milestones: design review end of April, beta in Q2, GA in Q3. Risks: app owners slow to migrate (mitigation: dedicated Slack channel and biweekly updates), security review delays (mitigation: Noor embedded from day one). Cadence: weekly eng standup, biweekly steering with Mei. Tools: Slack #aurora, Jira, Confluence. Asks: confirm Q2 compliance deadline is real, approve Noor's time allocation.",
+      "expected_output": "Deck with: title (Project Aurora, Ken, Mei), vision preserving compliance-driven framing, objectives (Q2 compliance / zero downtime / end of Q3 migration — preserved wording, no invented specific dates), scope in/out, team showing Aisha, Noor, 'App owners' (NOT Raj, NOT Elena — reporting lines), milestones (end of April / Q2 / Q3 preserved), 2 risks with stated mitigations, ways of working, 2 asks. Should NOT invent metrics like '99.9% uptime'. Should NOT fabricate end-dates like 'June 30' for Q2."
+    }
+  ]
+}

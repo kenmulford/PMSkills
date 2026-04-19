@@ -1,0 +1,20 @@
+{
+  "skill_name": "wbs",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Build me a WBS for our ServiceNow ticket migration. I'm the PM (Ken Mulford, sponsor Priya Patel). Three big pieces: (1) ticket migration itself — Marcus Chen's team, probably a month total, and includes mapping ticket fields (~3 days, Marcus), writing ETL scripts (~1 week, one of Marcus's engineers TBD), and running a mock cutover (~2 days, Marcus). (2) Agent training — Taylor Kim running workshops, ~2 weeks total, includes writing a training deck (~3 days, Taylor), running 3 workshops (~1 day each, Taylor), and a knowledge check (~1 day, Taylor). (3) Salesforce and Slack integrations — owners TBD, no estimates yet. Target deadline October.",
+      "expected_output": "A WBS with 1 project, 3 deliverables (Ticket migration, Agent training, Integrations), and level-3 work packages under the first two. Ticket migration should have 3 WPs. Agent training should have 3 WPs (deck, workshops, knowledge check). Integrations should either have no children or [TBD] children — owners and effort must be TBD for integration WPs. Effort numbers should match user's words (e.g. 24h for 3 days, not invented). No fabricated 'Initiate/Plan/Close' phases. Raj Patel should not appear (Marcus's manager, reporting line only)."
+    },
+    {
+      "id": 2,
+      "prompt": "I need a WBS for a finance dashboard project. I'm PM Alex Park. I know the big deliverables: data pipeline from our warehouse, the dashboard UI itself, user acceptance testing, and deployment. I don't have owners or estimates yet — we haven't staffed it.",
+      "expected_output": "A mostly-TBD WBS. Level 1 = Finance Dashboard project. Level 2 = four deliverables (Data pipeline, Dashboard UI, UAT, Deployment). Level 3 = all [TBD] or empty. Owners all [TBD]. Effort/duration all [TBD]. Draft Gaps sheet should list all the gaps. Should NOT invent work packages like 'Requirements gathering' or 'Data modeling' if user didn't name them. Should NOT invent owners or estimates."
+    },
+    {
+      "id": 3,
+      "prompt": "Project Aurora WBS. I'm Ken Mulford (PM), sponsor Mei Tanaka. Scope: new auth service replacing our middleware, plus migrating 40 apps. Aisha Khan leads backend (reports to Raj Patel). Noor Hassan owns security review (reports to Elena Volkov). Backend work: design threat model (Noor, 2 days), implement core auth service (Aisha, ~2 weeks), write migration SDK (Aisha, ~1 week), load test (Aisha, 3 days). Migration work: app owner onboarding (owner TBD, ~1 week), app migration waves (owner TBD — we're doing 4 waves of 10 apps each, ~1 week per wave). Compliance review by Q2.",
+      "expected_output": "A WBS with 1 project (Project Aurora), 2 deliverables (Backend, Migration). Backend has 4 work packages: threat model (Noor, 16h), core auth (Aisha, ~80h or [TBD — exceeds 80hr rule]), migration SDK (Aisha, ~40h), load test (Aisha, 24h). Migration has 2 work packages: onboarding [TBD owner], migration waves [TBD owner]. Raj Patel and Elena Volkov must NOT appear as owners — reporting lines only. Integrity sheet should flag the core auth work package if it was estimated at >80h."
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "skill_name": "lessons-learned",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Lessons learned for ServiceNow Ticket Migration. Ken Mulford PM, Priya Patel sponsor, closeout phase. Retro was yesterday — Marcus Chen, Jen Wu, Taylor Kim attended. Three things came up: (1) We should have scoped the Salesforce integration in Phase 1 instead of adding it mid-project — cost us about 3 weeks and a formal change request. (2) Jen's ETL script pattern worked great, reused across all 8 migration tracks, we should reuse it on future data migrations. (3) Training timeline was too tight — 2 weeks wasn't enough for the volume of material, Taylor was rushed. Marcus reports to Raj Patel.",
+      "expected_output": "3 lessons total, in user's mention order. Lesson 1: Change, Scope category, what_happened preserved verbatim, impact 'about 3 weeks and a formal change request', root_cause [TBD] (not stated), recommendation to scope in Phase 1, owner [TBD]. Lesson 2: Keep, Technical, recommendation 'reuse ETL script pattern on future data migrations'. Lesson 3: Change, Schedule or People, what_happened 'Training timeline was too tight — 2 weeks wasn't enough', recommendation [TBD] (user only described problem). NO fabricated 4th 'Keep' lesson. Raj Patel NOWHERE in document. Contributors: Marcus Chen, Jen Wu, Taylor Kim."
+    },
+    {
+      "id": 2,
+      "prompt": "Post-mortem notes for the Aurora incident response project. Alex Park PM, Mei Tanaka sponsor. Phase 1 gate retro. Everything went wrong. Four points: (1) Vendor Accenture missed their Week 2 security audit deliverable. (2) Our internal runbooks were out of date so when the first alert fired nobody knew the escalation path. (3) Stakeholder comms were inconsistent — Mei was getting different status from different channels. (4) We didn't have a defined rollback plan for the database migration and we needed one. Recommendations: Alex is going to own runbook refresh. For the vendor issue and the comms issue we don't have owners yet. Rollback plan owner also TBD.",
+      "expected_output": "4 lessons total, ALL Change disposition (user gave zero positives — do NOT invent a 'Keep' lesson to balance). Categories: Vendor, Process, Process (or People), Technical. Owners: L-02 Alex Park; others [TBD]. Recommendations: L-02 'Refresh runbooks' (stated); L-01, L-03, L-04 [TBD] since user described problems without stated recommendations. Root causes all [TBD]. Raj, Marcus, anyone not named does NOT appear."
+    },
+    {
+      "id": 3,
+      "prompt": "Quick lessons learned for the finance dashboard phase gate. Elena Vance PM. Two takeaways: BI tool evaluation took way longer than expected because we didn't set evaluation criteria upfront — next time we should define must-haves vs nice-to-haves before vendor demos. And the weekly checkpoint cadence with finance stakeholders was really effective — they felt heard, keep doing that.",
+      "expected_output": "2 lessons. L-01: Change, Process category, what_happened 'BI tool evaluation took way longer than expected', root_cause 'didn't set evaluation criteria upfront' (user stated it — OK to populate), recommendation 'define must-haves vs nice-to-haves before vendor demos'. L-02: Keep, Process or People, what_happened 'weekly checkpoint cadence with finance stakeholders was really effective', impact 'they felt heard', recommendation 'keep doing that'. Contributors not stated — [TBD]. No owners stated — all [TBD]."
+    }
+  ]
+}

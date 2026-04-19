@@ -1,0 +1,20 @@
+{
+  "skill_name": "risk-register",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Risk register for our ServiceNow ticket migration. Ken PM, Priya Patel sponsor. Risks I know: (1) Agent training gap — Taylor will run workshops but we only have 2 weeks, probability medium impact high. Mitigation: daily office hours during training. Owner Taylor Kim. (2) Data loss during ticket ETL — Marcus is writing the scripts. Probability low impact critical. Mitigation: dry-run in staging + rollback plan. Owner Marcus Chen. (3) Integration owners not staffed — Salesforce and Slack integrations have no owners. Probability high impact medium. Mitigation: escalate to Priya this week. Owner Ken. Standard PM risk register format, probability × impact matrix.",
+      "expected_output": "3 risks, exact user wording. Severities computed from matrix: R1 Medium×High=High, R2 Low×Critical=High, R3 High×Medium=High. All owners as stated. Priya mentioned in R3 mitigation is fine (user put her there). No invented risks, no invented scoring scale."
+    },
+    {
+      "id": 2,
+      "prompt": "I need to start a risk register for my finance dashboard project. I'm Alex Park PM. I haven't done a real risk workshop yet — the one concern I've thought of is that our data warehouse has had reliability issues lately and we depend on it for the pipeline. That's it for now.",
+      "expected_output": "1 risk: data warehouse reliability. Probability/impact TBD. Owner TBD (NOT auto-assigned to Alex). Mitigation TBD. Status Open or Unconfirmed. open_questions.md emitted."
+    },
+    {
+      "id": 3,
+      "prompt": "Project Aurora risk register. Ken PM, Mei Tanaka sponsor. Risks: (1) App owners slow to migrate — we've got 40 apps and historically migrations drag. Probability high, impact high. Mitigation: dedicated Slack channel and biweekly updates. Owner Aisha Khan (Aisha reports to Raj Patel). (2) Security review delays — Noor is embedded but compliance team is overloaded. Probability medium, impact critical. Mitigation: Noor escalates weekly to Elena Volkov if blocked. Owner Noor Hassan. (3) Something I'm worried about but can't quite articulate — there's been grumbling about the new session token format breaking a legacy integration but no one has confirmed.",
+      "expected_output": "3 risks. R1: Aisha owner, High×High=Critical, Slack channel mitigation. R2: Noor owner, Medium×Critical=Critical, escalation to Elena in mitigation (allowed since user put her there). R3: status Unconfirmed, probability/impact TBD, owner TBD, mitigation TBD. Raj Patel should NOT appear anywhere — Aisha's owner, Raj is reporting line only. Elena Volkov may appear in R2 mitigation text but NOT as owner."
+    }
+  ]
+}

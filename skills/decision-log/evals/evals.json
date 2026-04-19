@@ -1,0 +1,20 @@
+{
+  "skill_name": "decision-log",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Log these decisions from last week on ServiceNow migration. Ken Mulford PM. (1) We're using Mulesoft for the Salesforce integration. Priya Patel signed off on this Tuesday April 8. We picked Mulesoft because the vendor recommended it — we didn't really look at alternatives. Consequence: we need to budget $25k for the Mulesoft contract. (2) Training will be 2 weeks instead of 3. Marcus Chen and Taylor Kim agreed to this in our Monday April 7 standup. Reason: to hold the cutover date. (3) We're still debating whether to do the data archive migration in Phase 1 or Phase 2 — Marcus leans toward Phase 2. No call made yet. Marcus reports to Raj Patel.",
+      "expected_output": "3 entries. D-001: Mulesoft, decision_maker Priya Patel, date 2026-04-08, status Accepted, rationale 'Vendor recommendation' (short), options_considered has ONLY Mulesoft (NOT fabricated alternatives), consequences '$25k budget'. D-002: Training 2 weeks, decision_maker 'Marcus Chen and Taylor Kim' or 'Marcus and Taylor', date 2026-04-07, status Accepted, rationale 'to hold the cutover date'. D-003: Data archive phase, status Proposed, decision [TBD], decision_maker [TBD] (Marcus's lean is context, not decision), options_considered has Phase 1 and Phase 2 both unchosen. Raj Patel NOWHERE."
+    },
+    {
+      "id": 2,
+      "prompt": "Need to document architecture decisions for Project Aurora. Ken PM. We picked Postgres over DynamoDB for the primary data store. The decision happened in the tech review on March 15 — Aisha and the two backend engineers made the call. Reason: we already have Postgres expertise in-house and don't want to train on Dynamo. Also decided to use Locust for load testing — it's free and we've used it before. No particular meeting, just team consensus in Slack. For the caching layer, we're still evaluating Redis vs Memcached; Aisha is leading that eval but no recommendation yet.",
+      "expected_output": "3 entries. D-001: Postgres over DynamoDB, decision_maker 'Aisha and the two backend engineers' (NOT just Aisha), date 2026-03-15, status Accepted, rationale 'existing Postgres expertise in-house, don't want to train on Dynamo', options_considered: Postgres (chosen), DynamoDB. D-002: Locust for load testing, decision_maker 'team consensus' or [TBD] (user didn't name individual), date [TBD] (no date given for Slack decision), status Accepted, rationale 'free and used before'. D-003: Caching layer, status Proposed, decision [TBD] (no recommendation yet), options Redis and Memcached (neither chosen)."
+    },
+    {
+      "id": 3,
+      "prompt": "One decision to log for finance dashboard. Elena Vance PM. We originally decided in February to use Tableau for the dashboard — at the time we thought it would integrate better with our existing BI stack. That was decision D-007 in our existing log. Now we've changed our mind and we're going with Power BI instead because the CFO prefers it and the Tableau renewal would have been $40k vs Power BI $15k. The new decision was made yesterday by Elena and Derek Cho (CFO).",
+      "expected_output": "One NEW entry (D-008 or next ID). Title 'Use Power BI instead of Tableau' or similar. decision_maker 'Elena Vance and Derek Cho' or 'Elena and Derek Cho'. date 2026-04-14. status Accepted. rationale 'CFO preference and cost ($15k Power BI vs $40k Tableau renewal)'. supersedes_id 'D-007'. options_considered: Power BI (chosen), Tableau. The old D-007 entry is NOT rewritten (this test captures only the new supersession)."
+    }
+  ]
+}

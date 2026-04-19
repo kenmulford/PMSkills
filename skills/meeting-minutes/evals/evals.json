@@ -1,0 +1,20 @@
+{
+  "skill_name": "meeting-minutes",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Minutes for ServiceNow weekly sync, Wednesday April 15 2026, 10am, Zoom. Present: Ken Mulford (PM, chair), Marcus Chen, Jen Wu, Taylor Kim. Priya Patel was out. Agenda: (1) Salesforce integration owner — discussed two candidates, no decision yet, Priya deciding by Monday. (2) Workshop 2 prep — Taylor walked through slides, team approved them. (3) Data mapping bug — Marcus reported 2-day fix estimate, agreed to run full cutover test Thursday. Action: Marcus completes bug fix by EOD Wednesday. Taylor to send workshop 2 materials to attendees Friday. Parking lot: training expansion to 3 weeks. Marcus reports to Raj Patel.",
+      "expected_output": "4 present, 1 absent. NO Raj Patel anywhere. Agenda: 3 items. Decisions: item 1 has NO decision (discussion only). Item 2: 'Approved Workshop 2 slides'. Item 3: 'Run full cutover test Thursday'. Action items: 2 (Marcus fix bug, Taylor send materials) with owners named, due dates verbatim ('EOD Wednesday', 'Friday') or TBD. Parking lot: 'Training expansion to 3 weeks'. Do NOT fabricate a 'Review last meeting action items' agenda item."
+    },
+    {
+      "id": 2,
+      "prompt": "Quick notes from yesterday's Aurora standup. Alex Park ran it. Team present: Aisha, Noor, plus two backend engineers (names escape me right now). Dana Lee dialed in for 10 min on the security audit topic. We covered the Accenture delay — Alex said he'd follow up today — and the runbook refresh which Aisha is leading. Noor mentioned she's blocked on the SSO config but didn't ask for help yet. No formal decisions.",
+      "expected_output": "Present: Alex Park, Aisha, Noor, Dana Lee (partial attendance noted), 2 backend engineers [TBD names]. Absent: (none). Decisions: empty (user said 'no formal decisions'). Action items: Alex follow up on Accenture delay (no due date → [TBD]), Aisha leading runbook refresh (no due date → [TBD]). Parking lot: Noor blocked on SSO (not a formal ask yet). NO fabricated 'Noor to unblock by EOD' action."
+    },
+    {
+      "id": 3,
+      "prompt": "Steering committee minutes for finance dashboard. April 14 2026, 2pm, Building 4 Room 302. Chaired by Elena Vance. Present: Elena, CFO Derek Cho, Mei Tanaka, 2 finance analysts. CFO approved moving to production after UAT passes. Mei asked about training — Elena confirmed training is on track. Derek asked Elena to prepare a go-live memo for the exec team by April 21. Elena agreed. Next steering committee is April 28.",
+      "expected_output": "Present: Elena Vance, Derek Cho (CFO), Mei Tanaka, 2 finance analysts [names TBD or listed as 'Finance Analyst 1/2']. Chair: Elena. Decision: 'Approved moving to production after UAT passes' decided by Derek Cho (CFO). Action item: Elena prepare go-live memo for exec team, due 2026-04-21. Next meeting: 2026-04-28. Mei's training question → parking lot or discussion note (not a new action item)."
+    }
+  ]
+}

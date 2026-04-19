@@ -1,0 +1,20 @@
+{
+  "skill_name": "raci-matrix",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I need a RACI for our ServiceNow ticket migration. Team is: me (Ken, PM), Priya Patel (sponsor, VP Customer Success), Marcus Chen (eng lead), Jordan Lee and Sam Rivera (engineers, half time), and Taylor Kim (support ops, 1 day/wk). Main activities: build the data export tool, map Zendesk fields to ServiceNow schema, run the migration itself, validate ticket history after migration, update the Salesforce and Slack integrations, train the support team, and cutover. Marcus owns the build and the migration execution. Jordan and Sam do field mapping and integration updates. Taylor owns training and validates ticket history. Priya approves cutover. I'm accountable for schedule and scope overall.",
+      "expected_output": "A complete RACI .xlsx with 7 columns (the 6 named people) and ~7 activity rows. Marcus should be R/A on build and migration. Jordan & Sam should be R on field mapping and integrations. Taylor R on training and ticket validation. Priya A on cutover. Ken A on scope/schedule (probably implicit). No fabricated people. Integrity sheet should be clean (every row has one A)."
+    },
+    {
+      "id": 2,
+      "prompt": "Make me a RACI matrix for our new data platform project. I don't know who's on the team yet but I know the main things we need to do: pick a warehouse vendor, define the initial data model, set up ingestion from the CRM and billing system, build dashboards for finance and sales, and run a user acceptance test. I'm the PM.",
+      "expected_output": "A draft RACI with the 5 activities as rows, but columns are mostly TBD because the user has no team. Every cell should be TBD. Integrity sheet should flag every row (no A, no R) OR the matrix should use a single 'TBD — team unknown' column. Open questions document should be emitted. Should NOT fabricate any names or roles."
+    },
+    {
+      "id": 3,
+      "prompt": "Draft a RACI for Project Aurora (new auth service). Team: Ken (PM), Mei Tanaka (sponsor), Aisha Khan (backend lead), Noor Hassan (security lead). Aisha reports to Raj Patel (Engineering Manager). Noor reports to Elena Volkov. Activities: scope definition, threat model, token API build, integration testing with the 40 internal apps, security review, go-live approval. Ken drives scope and schedule. Aisha builds the API and leads integration testing. Noor does the threat model and security review. Mei approves scope and go-live. Everyone is informed on the security review results.",
+      "expected_output": "A RACI with 4 columns (Ken, Mei, Aisha, Noor) — Raj Patel and Elena Volkov MUST NOT appear as columns (they're reporting-line managers only). Activities should include all 6 listed. Ken R/A on scope. Mei A on scope and go-live. Aisha R/A on token API and integration. Noor R/A on threat model and security review. 'Everyone is informed' should produce I cells on the security review row. No invented activities. Integrity sheet should be clean."
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "skill_name": "project-schedule",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Build me a project schedule for our ServiceNow ticket migration. Tasks: (1) Field mapping, 3 days, Marcus Chen. (2) ETL script development, 1 week, Jen Wu (one of Marcus's engineers). Must start after field mapping. (3) Mock cutover, 2 days, Marcus, starts after ETL done. (4) Training deck, 3 days, Taylor Kim, can start anytime. (5) Workshop 1, 1 day, Taylor, starts after training deck. (6) Workshop 2, 1 day, Taylor, starts after Workshop 1. (7) Go-live, 1 day, Marcus, starts after mock cutover AND all workshops done. Kickoff is Monday June 1, 2026. I'm Ken, PM.",
+      "expected_output": "7 tasks with exact user names. Durations: 3, 5, 2, 3, 1, 1, 1. Preds: empty, 1, 2, empty, 4, 5, '3,6'. Dates computed from 2026-06-01 skipping weekends. Go-live should compute correctly. Critical Path sheet populated. No invented tasks. No reporting-line managers anywhere."
+    },
+    {
+      "id": 2,
+      "prompt": "I need a project schedule for my finance dashboard. Phases: data pipeline, UI build, UAT, deploy. I don't have durations or dates yet — we haven't staffed it. Alex Park PM.",
+      "expected_output": "4 tasks with exact user names. All duration_days = TBD. All owners = TBD. No anchor date → all start/finish = [TBD — no anchor date]. Critical Path sheet should say 'unavailable'. open_questions.md emitted. No invented sub-tasks, no made-up status defaults, no fabricated owners."
+    },
+    {
+      "id": 3,
+      "prompt": "Project Aurora schedule. Ken PM, Mei Tanaka sponsor. Tasks: threat model (Noor Hassan, 2 days), core auth service (Aisha Khan, ~2 weeks, after threat model), migration SDK (Aisha, ~1 week, after core auth), load test (Aisha, 3 days, after migration SDK), app owner onboarding (owner TBD, ~1 week, after load test), migration wave 1 of 10 apps (owner TBD, ~1 week, after onboarding). Aisha reports to Raj Patel. Noor reports to Elena Volkov. Start date: Monday May 4, 2026.",
+      "expected_output": "6 tasks. '~2 weeks' and '~1 week' preserved as [TBD — user said ~X weeks], NOT converted to 10 or 5. Raj Patel and Elena Volkov absent entirely — no 'Reports To' column. TBD owners on onboarding and wave tasks. Dates only computed for tasks 1 and 4 (threat model: May 4-5, load test: depends on core auth which is TBD so also TBD). Actually since core auth is TBD, everything downstream is TBD except threat model. Critical Path unavailable."
+    }
+  ]
+}
