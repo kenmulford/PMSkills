@@ -1,6 +1,8 @@
 # PM Skills
 
-15 Project+ skills for technical project managers. Each skill generates a production-ready artifact (.docx, .xlsx, or .pptx) from natural language input, enforcing never-invent discipline throughout: no fabricated names, dates, metrics, stakeholders, or rationale.
+A Claude Code plugin that turns plain-language project descriptions into production-ready PM artifacts — no hallucinated names, dates, or metrics.
+
+15 skills covering the full Project+ lifecycle, each generating a formatted .docx, .xlsx, or .pptx file from natural language input. Built with hard guardrails that prevent the LLM failure modes that make most AI-generated PM documents unusable.
 
 ## Skills
 
@@ -76,4 +78,5 @@ Install: `pip install python-docx openpyxl python-pptx`
 
 ## Author
 
-Ken Mulford — [ken@kenmulford.com](mailto:ken@kenmulford.com)
+Ken Mulford  
+[github.com/kenmulford](https://github.com/kenmulford) · [linkedin.com/in/kmulford](https://linkedin.com/in/kmulford) · [ken@kenmulford.com](mailto:ken@kenmulford.com)
